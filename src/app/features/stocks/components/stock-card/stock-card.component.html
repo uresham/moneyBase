@@ -9,28 +9,24 @@
       <div class="range-container">
         <p>Daily</p>
         <div class="range">
-          <mat-icon fontIcon="arrow_upward"></mat-icon> ${{
-            stock.highPrice | number: "1.2-2"
-          }}
+          <mat-icon fontIcon="arrow_upward" class="arrow-up"></mat-icon> 
+          ${{ stock.highPrice | number: "1.2-2" }}
         </div>
         <div class="range">
-          <mat-icon fontIcon="arrow_downward"></mat-icon> ${{
-            stock.lowPrice | number: "1.2-2"
-          }}
+          <mat-icon fontIcon="arrow_downward" class="arrow-down"></mat-icon> 
+          ${{ stock.lowPrice | number: "1.2-2" }}
         </div>
       </div>
       <div class="range-container">
         @if (isDesktop) {
           <p>Yearly</p>
           <div class="range">
-            <mat-icon fontIcon="arrow_upward"></mat-icon> ${{
-              stock.yearHigh | number: "1.2-2"
-            }}
+            <mat-icon fontIcon="arrow_upward" class="arrow-up"></mat-icon> 
+            ${{ stock.yearHigh | number: "1.2-2" }}
           </div>
           <div class="range">
-            <mat-icon fontIcon="arrow_downward"></mat-icon> ${{
-              stock.yearLow | number: "1.2-2"
-            }}
+            <mat-icon fontIcon="arrow_downward" class="arrow-down"></mat-icon> 
+            ${{ stock.yearLow | number: "1.2-2" }}
           </div>
         }
       </div>
