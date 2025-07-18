@@ -1,0 +1,15 @@
+<mat-grid-list
+  [cols]="breakpoint()"
+  [rowHeight]="isDesktop() ? '2:2' : '2:1.25'"
+  (window:resize)="onResize($event)"
+>
+  @for (stock of stocks$ | async; track stock.symbol) {
+    <mat-grid-tile>
+      <app-stock-card
+        [stock]="stock"
+        [isDesktop]="isDesktop()"
+        (toggle)="onToggleStock($event)"
+      ></app-stock-card>
+    </mat-grid-tile>
+  }
+</mat-grid-list>

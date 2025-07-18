@@ -1,0 +1,65 @@
+.green {
+  background-color: #c7fedb !important;
+}
+.red {
+  background-color: #fbe0e0 !important;
+}
+.grey {
+  background-color: #c9c9c9 !important;
+  filter: grayscale(0.7);
+}
+.white {
+  background-color: #fff !important;
+}
+
+.stock-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  margin: 0.5rem;
+  min-width: 250px;
+  max-width: 320px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.range-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+::ng-deep .mat-mdc-card-content {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(200, 200, 200, 0.4);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .stock-card {
+    min-width: 90vw;
+    max-width: 98vw;
+    padding: 0.7rem;
+  }
+  .price {
+    font-size: 1.2rem;
+  }
+}
